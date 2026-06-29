@@ -6,7 +6,7 @@
   <title>书籍下载</title>
   <style>
     :root {
-      color-scheme: light;
+      color-scheme: light dark;
       --ink: #1f2328;
       --soft-ink: #3f4650;
       --muted: #6a737d;
@@ -297,6 +297,55 @@
       .downloads { grid-template-columns: 1fr; }
 
       .download { min-height: 56px; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #f1f3f5;
+        --soft-ink: #cbd3dc;
+        --muted: #9da8b3;
+        --line: #343b45;
+        --paper: #151922;
+        --wash: #0f1218;
+        --panel: #171b24;
+        --accent: #d88a8a;
+        --accent-dark: #f0b4b4;
+        --olive: #9eb18d;
+        --gold: #e0b663;
+        --blue: #8fb1c8;
+        --chip: #2b2224;
+        --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+      }
+
+      body {
+        background: linear-gradient(180deg, rgba(216, 138, 138, 0.12), rgba(15, 18, 24, 0) 340px), var(--wash);
+      }
+
+      .masthead,
+      .book {
+        background: linear-gradient(135deg, rgba(23, 27, 36, 0.96), rgba(18, 22, 30, 0.92)), var(--panel);
+      }
+
+      .stat,
+      .download {
+        background: #171b24;
+      }
+
+      .download:focus-visible,
+      .download:hover {
+        background: #201c20;
+      }
+
+      .icon {
+        background: #2b2224;
+      }
+
+      .notice {
+        border-color: rgba(224, 182, 99, 0.45);
+        border-left-color: var(--gold);
+        background: #2a2115;
+        color: #f1d08c;
+      }
     }
   </style>
 </head>
